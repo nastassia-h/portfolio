@@ -141,8 +141,8 @@ const Navbar = () => {
                className='side-bar-rounded'
                animate={showMenu ? {
                   borderRadius: '100%',
-                  x: width >= 767.98 ? '-1%' : '-100%',
-                  scale: 1.5
+                  x: width >= 767.98 ? 0 : '-100%',
+                  scale: 1.5,
                } : {
                   borderRadius: '100%',
                   x: '100%',

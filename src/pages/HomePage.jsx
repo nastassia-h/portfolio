@@ -15,6 +15,7 @@ const HomePage = () => {
    const { scrollYProgress } = useScroll()
 
    useEffect(() => {
+      window.scrollTo(0, 0);
       function updateY() {
          const newY = transform(scrollYProgress.get(), [0, 0.4], [0, 100])
          y.set(newY)
