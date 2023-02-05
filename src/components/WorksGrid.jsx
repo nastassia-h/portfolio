@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react'
-import { useState, useRef } from 'react';
+import React from 'react'
+import { useState } from 'react';
 import { useMousePosition } from '../hooks/useMousePosition'
 import { useWindowDimensions } from '../hooks/useWindowDimensions';
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { works } from '../data/works';
 import { Link } from 'react-router-dom';
 import Cursor from './UI/cursor/Cursor';
-import MagneticBtn from './UI/magnetic/MagneticBtn';
 
 const WorksGrid = ({ length }) => {
    const { x, y } = useMousePosition();
    const [hovered, setHovered] = useState(false)
-   const { width, height } = useWindowDimensions();
+   const { width } = useWindowDimensions();
 
    return (
       <div className='menu'
@@ -40,21 +39,16 @@ const WorksGrid = ({ length }) => {
 export default WorksGrid
 
 const WorksGridItem = ({ title, desc, id, src, width, color }) => {
-   const [isHovered, setIsHovered] = useState(false)
    return (
       <motion.li
          className='menu-item'
-      //animate={isHovered && showSlider ? { width: '105%' } : { width: '100%' }}
-      //transition={{ duration: .3 }}
-      //onHoverStart={() => { setActiveSlide(id); setIsHovered(true) }}
-      //onHoverEnd={() => setIsHovered(false)}
       >
          <Link to={`/work/${title.toLowerCase()}`} className='menu-item__inner'>
             <motion.div
                style={{ backgroundColor: `${color}`, backgroundImage: `url('${src}')` }} className='menu-item__image'>
             </motion.div>
-            <div className={`${isHovered && width >= 991.98 ? "active" : ""} menu-item__title`}>{title}</div>
-            <div className={`${isHovered && width >= 991.98 ? "active" : ""} menu-item__description`}>{desc}</div>
+            <div className={`menu-item__title`}>{title}</div>
+            <div className={`menu-item__description`}>{desc}</div>
          </Link>
       </motion.li>
    )

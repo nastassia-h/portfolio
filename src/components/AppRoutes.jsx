@@ -6,7 +6,6 @@ import AboutPage from '../pages/AboutPage'
 import ProjectPage from '../pages/ProjectPage'
 import { Routes, Route, Navigate, useLocation } from 'react-router'
 import { AnimatePresence } from 'framer-motion'
-import ScrollToTop from './ScrollToTop'
 
 const AppRoutes = () => {
    const location = useLocation();

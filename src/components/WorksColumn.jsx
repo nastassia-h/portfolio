@@ -11,7 +11,7 @@ const WorksColumn = ({ length }) => {
   const { x, y } = useMousePosition();
   const [activeSlide, setActiveSlide] = useState(0);
   const [hovered, setHovered] = useState(false)
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <div className='menu'
     >

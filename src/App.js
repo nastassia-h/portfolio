@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Loader from "./components/UI/transitions/Loader";
-import { useLayoutEffect, useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./pages/Footer";
 import AppRoutes from "./components/AppRoutes";
 import { useLocation } from "react-router";

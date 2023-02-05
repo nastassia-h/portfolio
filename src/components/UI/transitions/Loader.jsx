@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import RoundedDiv from '../RoundedDiv'
 
 const Loader = () => {
    const comp = useRef();

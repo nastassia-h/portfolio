@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import 'swiper/css';
 import { worksSlider } from '../data/worksSlider';
-import { motion, useMotionValue, useScroll, useSpring, transform } from 'framer-motion'
+import { motion, useMotionValue, useScroll, transform } from 'framer-motion'
 
 const WorkSlider = ({ direction, startIndex, endIndex, index }) => {
 

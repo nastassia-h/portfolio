@@ -31,7 +31,7 @@ const variants = {
 
 const Navbar = () => {
    const [hovered, setHovered] = useState(false);
-   const { width, height } = useWindowDimensions();
+   const { width } = useWindowDimensions();
    const [showMenu, setShowMenu] = useState(false);
 
    const [menuBtn, setMenuBtn] = useState(false);
