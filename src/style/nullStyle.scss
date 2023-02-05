@@ -1,0 +1,142 @@
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+::selection {
+   background-color: var(--color-wine);
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   //min-width: $minwidth;
+   position: relative;
+   background-color: var(--color-light);
+   -webkit-font-smoothing: antialiased;
+
+   ::-webkit-scrollbar {
+      width: 0;
+   }
+}
+
+body {
+   font-size: clamp(16px, 1.2vw, 19px);
+   color: var(--color-text);
+   background-color: var(--color-light);
+   line-height: 1;
+   font-family: $fontFamily;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+
+   &.lock {
+      overflow: hidden;
+      touch-action: none;
+      // @media(max-width:$md3+px){
+      //     width: 100%;
+      //     position: fixed;
+      //     overflow: hidden;
+      // }
+   }
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+   color: inherit;
+   background-color: transparent;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+canvas,
+img,
+video {
+   max-width: 100%;
+   height: auto;
+   box-sizing: border-box;
+}
+
+svg {
+   max-width: none;
+   height: auto;
+   box-sizing: border-box;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+   vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
