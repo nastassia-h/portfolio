@@ -17,9 +17,11 @@ const Loader = () => {
          top: "-110%",
          ease: "Power2.easeInOut",
       })
+      //document.body.classList.remove('lock')
    }
 
    useLayoutEffect(() => {
+      document.body.classList.add('lock')
       let ctx = gsap.context(() => {
          tl.current = gsap.timeline()
             .from(".grid .flex-col", {

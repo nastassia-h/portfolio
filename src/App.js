@@ -12,6 +12,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
+      document.body.classList.remove('lock')
     }, 6800)
     return () => clearTimeout(timer)
   }, [])

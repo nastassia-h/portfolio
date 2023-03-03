@@ -80,8 +80,10 @@ const Banner = () => {
    const [playMarquee, setPlayMarquee] = useState(false);
 
    useEffect(() => {
+      document.body.classList.add('lock')
       const timer = setTimeout(() => {
          setPlayMarquee(true);
+         document.body.classList.remove('lock')
       }, 2000);
       return () => clearTimeout(timer)
    }, []);
