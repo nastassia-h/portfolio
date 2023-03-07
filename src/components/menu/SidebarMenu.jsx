@@ -23,7 +23,7 @@ const SidebarMenu = ({ visible, setVisible }) => {
                }}
             >
                <MagneticLink title={link.title} className={`magnetic-link sidebar`} distanceTrigger={0.4}>
-                  <Link onClick={() => { setVisible(false); document.body.classList.remove('lock') }} to={link.href}>{link.title}</Link>
+                  <Link onClick={() => { setVisible(false); document.body.classList.remove('lock'); }} to={link.href}>{link.title}</Link>
                </MagneticLink>
             </motion.li>
          )}

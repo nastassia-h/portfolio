@@ -37,15 +37,16 @@ const WorksPage = () => {
 
                      <div className='workpage-wrap'>
                         {width >= 991.98 &&
-                           <MagneticBtn onClick={() => { window.scrollTo(0, 0); setShowSlider(true) }} className='workpage-wrap-btn' style={{ borderRadius: '50%', backgroundColor: showSlider ? 'var(--color-dark)' : 'var(--color-wine)', border: 'none' }}>
-                              <MdOutlineMenu fontSize={'2em'} />
-                           </MagneticBtn>
+                           <>
+                              <MagneticBtn onClick={() => { window.scrollTo(0, 0); setShowSlider(true) }} className='workpage-wrap-btn' style={{ borderRadius: '50%', backgroundColor: showSlider ? 'var(--color-dark)' : 'var(--color-wine)', border: 'none' }}>
+                                 <MdOutlineMenu fontSize={'2em'} />
+                              </MagneticBtn>
+                              <MagneticBtn onClick={() => { window.scrollTo(0, 0); setShowSlider(false) }} className='workpage-wrap-btn' style={{ borderRadius: '50%', backgroundColor: !showSlider ? 'var(--color-dark)' : 'var(--color-wine)', border: 'none' }}>
+                                 <HiOutlineSquares2X2 fontSize={'2em'} />
+                              </MagneticBtn>
+                           </>
                         }
-                        <MagneticBtn onClick={() => { window.scrollTo(0, 0); setShowSlider(false) }} className='workpage-wrap-btn' style={{ borderRadius: '50%', backgroundColor: !showSlider ? 'var(--color-dark)' : 'var(--color-wine)', border: 'none' }}>
-                           <HiOutlineSquares2X2 fontSize={'2em'} />
-                        </MagneticBtn>
                      </div>
-
                   </motion.div>
                   {showSlider && width >= 991.98 ?
                      <AnimatePresence>
